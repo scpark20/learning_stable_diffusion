@@ -1,0 +1,12 @@
+accelerate launch --num_cpu_threads_per_process 1 fine_tune.py \
+    --pretrained_model_name_or_path="/data/sd_files/checkpoint/beautifulRealistic_v7.safetensors" \
+    --dataset_config=toml/celeba.toml \
+    --output_dir=/data/sd-results/celeba \
+    --output_name=celeba \
+    --save_model_as=safetensors  \
+    --max_train_steps=100000 \
+    --save_every_n_steps=1000 \
+    --learning_rate=1e-5  \
+    --optimizer_type="AdamW"  \
+    --mixed_precision="fp16"  \
+    --gradient_checkpointing
