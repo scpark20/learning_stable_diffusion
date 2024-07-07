@@ -1,0 +1,11 @@
+[general]
+shuffle_caption = true
+
+[[datasets]]
+resolution = 512
+batch_size = 2
+
+  [[datasets.subsets]]
+  image_dir = '/data/sd_dataset/celeba_controlnet/images'
+  caption_extension = ".txt"
+  conditioning_data_dir = "/data/sd_dataset/celeba_controlnet/conditioning_images"

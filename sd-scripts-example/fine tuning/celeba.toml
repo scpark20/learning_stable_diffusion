@@ -1,11 +1,10 @@
 [general]
 shuffle_caption = true                # 캡션을 셔플합니다.
-keep_tokens = 1                       # 캡션 내의 첫 번째 토큰을 고정합니다.
 
 [[datasets]]
 resolution = 512                      # 학습 해상도
 batch_size = 4                        # 배치 크기
 
   [[datasets.subsets]]
-  image_dir = '/data/sd-dataset/celeba'         # 학습용 이미지 폴더의 경로
+  image_dir = '/data/sd_dataset/celeba'         # 학습용 이미지 폴더의 경로
   metadata_file = 'toml/celeba.json'  # 메타데이터 파일의 경로

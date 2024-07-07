@@ -1,11 +1,11 @@
 [general]
-enable_bucket = true                        # Aspect Ratio Bucketingを使うか否か
+enable_bucket = true
 caption_extension = '.txt'
 
 [[datasets]]
-resolution = 512                            # 学習解像度
-batch_size = 4                             # バッチサイズ
+resolution = 512
+batch_size = 4
 
   [[datasets.subsets]]
-  image_dir = '/data/sd-dataset/jisoo_png'                     # 学習用画像を入れたフォルダを指定
-  num_repeats = 1                          # 学習用画像の繰り返し回数
+  image_dir = '/data/sd_dataset/jisoo_png'
+  num_repeats = 1
