@@ -1,0 +1,11 @@
+[general]
+enable_bucket = true
+caption_extension = '.txt'
+
+[[datasets]]
+resolution = 512
+batch_size = 4
+
+  [[datasets.subsets]]
+  image_dir = '/data/sd_dataset/shark_png'
+  num_repeats = 1
