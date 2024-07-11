@@ -6,6 +6,7 @@
 git clone https://github.com/scpark20/learning_stable_diffusion.git lsd
 cd lsd
 git submodule update --init --recursive sd-scripts
+```
 
 
 ## 1. Diffusers 작동 확인
@@ -14,10 +15,12 @@ git submodule update --init --recursive sd-scripts
 in lsd directory
 ```bash
 pip install -r diffusers-example/requirements.txt
+```
 
 - 다음 jupyter notebook 파일 실행하여 동작 확인
 ```bash
 diffusers-example/stable diffusion by diffusers.ipynb
+```
 
 2. SD-Scripts 작동 확인
 
@@ -25,12 +28,14 @@ diffusers-example/stable diffusion by diffusers.ipynb
 in lsd directory
 ```bash
 pip install -r sd-scripts-example/requirements.txt
+```
 
 -checkpoint 다운로드 (/data 디렉토리가 존재해야 함)
 in any directory
 ```bash
 mkdir -p /data/sd_files/checkpoint
 wget -P /data/sd_files/checkpoint https://storage.googleapis.com/scpark20_lsd/beautifulRealistic_v7.safetensors
+```
 
 -data 다운로드 (/data 디렉토리가 존재해야 함)
 in any directory
@@ -38,18 +43,22 @@ in any directory
 mkdir -p /data/sd_dataset
 wget -P /data/sd_dataset https://storage.googleapis.com/scpark20_lsd/jisoo_png.zip
 unzip /data/sd_dataset/jisoo_png.zip -d /data/sd_dataset
+```
 
 -.toml 파일 만들기
 in lsd/sd-scripts directory
 ```bash
 mkdir toml
 cp ../sd-scripts-example/lora/jisoo_lora.toml toml/
+```
 
 -accelerate 설정하기
 in any directory
 ```bash
 accelerate config
+```
 
+```bash
 In which compute environment are you running?
 ➔ this machine
 Which type of machine are you using?
@@ -66,6 +75,7 @@ Would you like to enable numa efficiency?
 ➔ NO
 Do you wish to use FP16 or BF16 (mixed precision)?
 ➔  fp16
+```
 
 -Training 실행하여 작동 확인
 100 steps 트레이닝 후 /data/sd_results/jisoo_lora/jisoo_lora.safetensors 파일이 생기면 완료
@@ -84,3 +94,4 @@ accelerate launch --num_cpu_threads_per_process 1 train_network.py \
     --mixed_precision="fp16"  \
     --gradient_checkpointing \
     --network_module=networks.lora
+```
