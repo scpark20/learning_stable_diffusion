@@ -18,9 +18,10 @@ git submodule update --init --recursive sd-scripts
 pip install -r diffusers-example/requirements.txt
 ```
 
-#### 다음 jupyter notebook 파일 실행하여 동작 확인
-
+#### Jupyter Notebook 파일 실행하여 동작 확인
+```bash
 diffusers-example/stable diffusion by diffusers.ipynb
+```
 
 ## 2. SD-Scripts 작동 확인
 
