@@ -19,10 +19,18 @@ git submodule update --init --recursive ComfyUI
 pip install -r diffusers-example/requirements.txt
 ```
 
+#### checkpoint 다운로드 (/data 디렉토리가 존재해야 함)
+```bash
+# In any directory
+mkdir -p /data/sd_files/checkpoint
+wget -P /data/sd_files/checkpoint https://storage.googleapis.com/scpark20_lsd/beautifulRealistic_v7.safetensors
+```
+
 #### Jupyter Notebook 파일 실행하여 동작 확인
 ```bash
 diffusers-example/stable diffusion by diffusers.ipynb
 ```
+![ComfyUI](pics/diffusers.png)
 
 ## 2. SD-Scripts 작동 확인
 
@@ -30,13 +38,6 @@ diffusers-example/stable diffusion by diffusers.ipynb
 ```bash
 # In lsd directory
 pip install -r sd-scripts-example/requirements.txt
-```
-
-#### checkpoint 다운로드 (/data 디렉토리가 존재해야 함)
-```bash
-# In any directory
-mkdir -p /data/sd_files/checkpoint
-wget -P /data/sd_files/checkpoint https://storage.googleapis.com/scpark20_lsd/beautifulRealistic_v7.safetensors
 ```
 
 #### data 다운로드 (/data 디렉토리가 존재해야 함)
