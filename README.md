@@ -6,6 +6,7 @@
 git clone https://github.com/scpark20/learning_stable_diffusion.git lsd
 cd lsd
 git submodule update --init --recursive sd-scripts
+git submodule update --init --recursive ComfyUI
 ```
 
 
@@ -98,3 +99,30 @@ accelerate launch --num_cpu_threads_per_process 1 train_network.py \
 ```
 
 #### 100 steps 트레이닝 후 /data/sd_results/jisoo_lora/jisoo_lora.safetensors 파일이 생기면 완료
+
+## 3. ComfyUI 작동 확인
+
+#### requirements 파일로 package 설치
+
+```bash
+# In lsd directory
+pip install -r ComfyUI-example/requirements.txt
+```
+
+#### checkpoint 파일 symbolic link 만들기
+
+```bash
+# In lsd/ComfyUI directory
+ln -s /data/sd_files/checkpoint/beautifulRealistic_v7.safetensors models/checkpoints/beautifulRealistic_v7.safetensors
+```
+
+#### ComfyUI 실행
+```bash
+# In lsd/ComfyUI directory
+python main.py --listen 0.0.0.0
+```
+
+#### 웹브라우저에서 server ip:8188 열기
+
+#### Load Checkpoint Component에서 beautifulRealistic_v7 checkpoint 선택 후 Queue 버튼 눌러서 이미지 생성이 되면 완료
+![ComfyUI](pics/comfyui.png)

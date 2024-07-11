@@ -1,0 +1,6 @@
+scipy==1.10.1
+torchsde==0.2.6
+aiohttp==3.7.4post0
+torchaudio==2.3.1
+kornia==0.7.3
+spandrel==0.3.4
