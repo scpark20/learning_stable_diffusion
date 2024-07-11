@@ -102,27 +102,27 @@ accelerate launch --num_cpu_threads_per_process 1 train_network.py \
 
 ## 3. ComfyUI 작동 확인
 
-#### requirements 파일로 package 설치
+#### - requirements 파일로 package 설치
 
 ```bash
 # In lsd directory
 pip install -r ComfyUI-example/requirements.txt
 ```
 
-#### checkpoint 파일 symbolic link 만들기
+#### - checkpoint 파일 symbolic link 만들기
 
 ```bash
 # In lsd/ComfyUI directory
 ln -s /data/sd_files/checkpoint/beautifulRealistic_v7.safetensors models/checkpoints/beautifulRealistic_v7.safetensors
 ```
 
-#### ComfyUI 실행
+#### - ComfyUI 실행
 ```bash
 # In lsd/ComfyUI directory
 python main.py --listen 0.0.0.0
 ```
 
-#### 웹브라우저에서 server ip:8188 열기
+#### - 웹브라우저에서 server ip:8188 열기
 
-#### Load Checkpoint Component에서 beautifulRealistic_v7 checkpoint 선택 후 Queue 버튼 눌러서 이미지 생성이 되면 완료
+#### - Load Checkpoint Component에서 beautifulRealistic_v7 checkpoint 선택 후 Queue 버튼 눌러서 이미지 생성이 되면 완료
 ![ComfyUI](pics/comfyui.png)
