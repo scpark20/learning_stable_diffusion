@@ -4,3 +4,6 @@
 [submodule "diffusers"]
 	path = diffusers
 	url = https://github.com/huggingface/diffusers.git
+[submodule "sd-scripts"]
+	path = sd-scripts
+	url = https://github.com/kohya-ss/sd-scripts.git
