@@ -1,0 +1,5 @@
+einops==0.4.0
+imagesize==1.4.1
+opencv-python==4.10.0.84
+voluptuous==0.14.2
+toml==0.10.2
