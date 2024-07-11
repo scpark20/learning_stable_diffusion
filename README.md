@@ -123,6 +123,7 @@ python main.py --listen 0.0.0.0
 ```
 
 #### - 웹브라우저에서 server ip:8188 열기
+![ComfyUI](pics/comfyui_start.png)
 
 #### - Load Checkpoint Component에서 beautifulRealistic_v7 checkpoint 선택 후 Queue 버튼 눌러서 이미지 생성이 되면 완료
 ![ComfyUI](pics/comfyui.png)
